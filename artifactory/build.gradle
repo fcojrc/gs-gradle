@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        mavenCentral()
+
+    }
+    dependencies {
+        //Check for the latest version here: http://plugins.gradle.org/plugin/com.jfrog.artifactory
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
+    }
+}
+
 plugins {
     id 'java'
     id 'eclipse'
@@ -52,16 +63,7 @@ publishing {
 }
 
 // artifactory configuration
-buildscript {
-    repositories {
-        mavenCentral()
 
-    }
-    dependencies {
-        //Check for the latest version here: http://plugins.gradle.org/plugin/com.jfrog.artifactory
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
-    }
-}
 
 allprojects {
     apply plugin: "com.jfrog.artifactory"
