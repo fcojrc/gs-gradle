@@ -73,7 +73,6 @@ artifactory {
     publish {
         repository {
             repoKey = 'default-gradle-dev-local'
-            maven = true
         }
         defaults {
             publications('jar')
@@ -84,8 +83,6 @@ artifactory {
     resolve {
         repository {
             repoKey = 'default-gradle-dev'
-            maven = true
-
         }
     }
 }
