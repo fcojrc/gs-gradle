@@ -73,19 +73,27 @@ allprojects {
 }
 
 artifactory {
+    contextUrl = 'https://trial7bi9lt.jfrog.io/artifactory' // URL base de Artifactory (sin /ui/)
+
+    resolve {
+        repository {
+            repoKey = 'default-gradle-dev'
+            // Opcionalmente puedes agregar credenciales si el repositorio es privado:
+            // username = "${artifactory_user}"
+            // password = "${artifactory_password}"
+        }
+    }
+
     publish {
         repository {
             repoKey = 'default-gradle-dev-local'
+            // username = "${artifactory_user}"
+            // password = "${artifactory_password}"
         }
         defaults {
             publications('jar')
             publishArtifacts = true
             publishPom = true
-        }
-    }
-    resolve {
-        repository {
-            repoKey = 'default-gradle-dev'
         }
     }
 }
