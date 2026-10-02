@@ -7,7 +7,8 @@ mainClassName = 'hello.HelloWorld'
 
 // tag::repositories[]
 repositories { 
-    mavenCentral() 
+    mavenCentral()
+    google()
 }
 // end::repositories[]
 
