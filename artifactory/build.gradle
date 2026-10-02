@@ -23,6 +23,9 @@ application {
 
 // tag::repositories[]
 repositories { 
+    maven{
+        url 'https://trial7bi9lt.jfrog.io/ui/repos/tree/General/default-gradle-dev'
+    }
     mavenCentral()
     google()
 }
