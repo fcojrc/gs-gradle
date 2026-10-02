@@ -3,7 +3,9 @@ apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'maven-publish'
 
-mainClassName = 'hello.HelloWorld'
+application {
+    mainClass = 'hello.HelloWorld'
+}
 
 // tag::repositories[]
 repositories { 
